@@ -1,4 +1,4 @@
-Unsupervised Clustering Analysis of Depression and Heart Failure Outcomes
+UNSUPERVISED CLUSTERING ANALYSIS OF DEPRESSION AND HEART FAILURE OUTCOMES
 
 This repository contains the workflow and documentation for a data mining project aimed at exploring the relationship between depression severity (PHQ-9 scores) and heart failure outcomes using unsupervised machine learning techniques in Orange Data Mining.
 
