@@ -1,56 +1,59 @@
-UNSUPERVISED CLUSTERING ANALYSIS OF DEPRESSION AND HEART FAILURE OUTCOMES
 
-This repository contains the workflow and documentation for a data mining project aimed at exploring the relationship between depression severity (PHQ-9 scores) and heart failure outcomes using unsupervised machine learning techniques in Orange Data Mining.
+## ❤️‍🩹 Clustering Depression Severity and Heart Failure Progression
 
-🔍 Objective
-To investigate whether patients with higher levels of depression tend to experience worse clinical outcomes, including:
+### An Unsupervised Analysis of PHQ-9 Scores and Cardiac Outcomes
 
-Lower ejection fraction
+This repository presents an unsupervised clustering study exploring the relationship between **depression severity** (measured by PHQ-9) and **heart failure indicators**, including mortality, ejection fraction, BNP levels, and kidney function.
 
-Elevated BNP/NT-BNP levels
+---
 
-Higher mortality
+### 🎯 Project Aim
 
-Increased hospitalization rates
+To determine whether patients with higher **depression scores** also tend to experience **worse cardiovascular outcomes**, by applying clustering algorithms to a clinical dataset of **425 patients** with heart failure.
 
-📊 Dataset
-The analysis is based on a publicly available dataset of 425 patients with multiple clinical and psychological variables related to heart failure and mental health.
-Key features include:
+---
 
-PHQ-9 depression scores
+### 🧠 Methods Used
 
-Ejection fraction (%)
+Clustering was conducted in **Orange Data Mining** using:
 
-Blood pressure, BNP, kidney function, and demographic data
+* **K-Means** (optimal k=2, silhouette validated)
+* **Hierarchical Clustering** (3 clusters, 89% tree height)
+* **DBSCAN** (ε = 3.62, k-distance optimized)
 
-Outcomes such as hospitalization and mortality
+Preprocessing included normalization and feature selection of clinically relevant variables.
 
-🧪 Methodology
-The analysis uses unsupervised clustering techniques to detect natural patient groupings:
+---
 
-K-Means (validated via Silhouette scores)
+### 📋 Key Features Used
 
-Hierarchical Clustering (average linkage, 89% height cut)
+* **PHQ-9** (depression score)
+* **Ejection fraction (%)**
+* **BNP / NT-proBNP levels**
+* **Blood urea nitrogen**, **eGFR**
+* **Systolic blood pressure**, **age**
+* **Hospitalization & mortality status**
 
-DBSCAN (epsilon selected via k-distance elbow plot)
+---
 
-🖼️ Visualization Tools
-Box Plots for comparing depression and cardiac variables across clusters
+### 📊 Key Findings
 
-Scatter Plots to analyze trends between PHQ-9 and outcomes (e.g., BNP, eGFR)
+Across all clustering methods:
 
-MDS Maps for visual separation of clusters
+* Clusters with **higher PHQ-9** scores consistently exhibited:
 
-✅ Key Findings
-Across all three clustering methods, patients with higher PHQ-9 scores consistently clustered into groups showing:
+  * **Lower ejection fraction**
+  * **Higher mortality** (up to 96.5% in K-Means C2)
+  * **Elevated BNP**, **more hospitalizations**
+  * **Worse kidney function**
 
-Worse heart function (lower ejection fraction)
+* Visual tools (box plots, scatter plots, MDS) confirmed these patterns and supported the link between **mental health** and **cardiac decline**.
 
-Elevated heart failure biomarkers (BNP)
+---
 
-Higher death and hospitalization rates
-This supports the hypothesis that depression severity is positively correlated with adverse heart failure progression.
+### ✅ Conclusion
 
-🧠 Conclusion
-The study reinforces the value of integrating mental health indicators into clinical assessment of heart failure. Clustering can be a useful tool for identifying high-risk patient profiles and may inform more holistic, patient-centered care strategies.
+This analysis provides strong evidence that **depression severity** is associated with **worse heart failure progression**. Clustering methods reveal that higher PHQ-9 scores align with poor cardiac and renal outcomes, reinforcing the need for **integrated mental and physical health care** in chronic heart failure management.
+
+
 
